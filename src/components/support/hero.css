@@ -1,0 +1,129 @@
+.support-hero {
+    padding: 120px 2rem 4rem;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+}
+
+.support-hero-container {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.support-hero-content {
+    text-align: center;
+    animation: fadeUp 0.8s ease-out;
+}
+
+.support-badge {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 0.3rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #666;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.support-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.support-hero-content p {
+    font-size: 1.2rem;
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.8;
+}
+
+.support-search {
+    display: flex;
+    gap: 0.8rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.support-search-input {
+    flex: 1;
+    padding: 0.9rem 1.5rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    background: white;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.support-search-input:focus {
+    border-color: #1a1a1a;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+}
+
+.support-search-btn {
+    padding: 0.9rem 2rem;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.support-search-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .support-hero {
+        padding: 100px 1.5rem 3rem;
+        min-height: 50vh;
+    }
+    .support-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .support-hero-content p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .support-hero {
+        padding: 90px 1rem 2.5rem;
+    }
+    .support-hero-content h1 {
+        font-size: 2rem;
+    }
+    .support-search {
+        flex-direction: column;
+    }
+    .support-search-input {
+        border-radius: 12px;
+    }
+    .support-search-btn {
+        border-radius: 12px;
+        padding: 0.8rem;
+    }
+}

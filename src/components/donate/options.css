@@ -1,0 +1,239 @@
+.donate-options {
+    padding: 5rem 2rem;
+    background: white;
+}
+
+.options-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.options-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+}
+
+.options-badge {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 0.3rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #666;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.options-header h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.options-header p {
+    color: #888;
+    font-size: 1.1rem;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.donate-card.main {
+    background: #fafafa;
+    border-radius: 16px;
+    padding: 2.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.donate-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.donate-currency {
+    font-size: 2rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+.amount-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.amount-btn {
+    padding: 0.8rem;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    color: #1a1a1a;
+}
+
+.amount-btn:hover {
+    border-color: #1a1a1a;
+    background: #f8f8f8;
+}
+
+.amount-btn.active {
+    background: #1a1a1a;
+    color: white;
+    border-color: #1a1a1a;
+}
+
+.custom-amount {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.custom-amount:focus-within {
+    border-color: #1a1a1a;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.04);
+}
+
+.currency-sign {
+    padding: 0.8rem 0 0.8rem 1rem;
+    color: #999;
+    font-size: 1.1rem;
+}
+
+.custom-amount input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+    color: #1a1a1a;
+}
+
+.custom-amount input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.donate-btn {
+    width: 100%;
+    padding: 0.9rem;
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.donate-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.donate-note {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* Donate Info */
+.donate-info h3 {
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+.info-item {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+    background: #fafafa;
+    border-radius: 12px;
+    margin-bottom: 0.8rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.info-item:hover {
+    background: white;
+    border-color: rgba(0, 0, 0, 0.04);
+    transform: translateX(4px);
+}
+
+.info-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.info-item h4 {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin: 0 0 0.2rem;
+}
+
+.info-item p {
+    color: #888;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+@media (max-width: 968px) {
+    .options-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .donate-info {
+        order: 1;
+    }
+    .donate-card.main {
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .donate-options {
+        padding: 3rem 1.5rem;
+    }
+    .options-header h2 {
+        font-size: 2rem;
+    }
+    .donate-card.main {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .donate-options {
+        padding: 2.5rem 1rem;
+    }
+    .options-header h2 {
+        font-size: 1.8rem;
+    }
+    .amount-buttons {
+        grid-template-columns: 1fr 1fr;
+    }
+    .donate-card.main {
+        padding: 1.5rem;
+    }
+}

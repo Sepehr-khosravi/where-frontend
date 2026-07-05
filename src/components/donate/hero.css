@@ -1,0 +1,131 @@
+.donate-hero {
+    padding: 120px 2rem 4rem;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, #fafafa 0%, #ffffff 100%);
+}
+
+.donate-hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.donate-hero-content {
+    text-align: center;
+    animation: fadeUp 0.8s ease-out;
+}
+
+.donate-badge {
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.04);
+    padding: 0.3rem 1.2rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    color: #666;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.donate-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 300;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.donate-hero-content p {
+    font-size: 1.2rem;
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.8;
+}
+
+.donate-hero-stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: #1a1a1a;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #999;
+    margin-top: 0.2rem;
+}
+
+.stat-divider {
+    width: 1px;
+    height: 40px;
+    background: #e8e8e8;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+    .donate-hero {
+        padding: 100px 1.5rem 3rem;
+    }
+    .donate-hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .donate-hero-content p {
+        font-size: 1rem;
+    }
+    .donate-hero-stats {
+        gap: 1.5rem;
+        padding: 1.5rem;
+        flex-wrap: wrap;
+    }
+    .stat-divider {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .donate-hero {
+        padding: 90px 1rem 2.5rem;
+    }
+    .donate-hero-content h1 {
+        font-size: 2rem;
+    }
+    .donate-hero-stats {
+        gap: 1rem;
+        padding: 1.2rem;
+        flex-direction: column;
+    }
+    .stat-number {
+        font-size: 1.5rem;
+    }
+}

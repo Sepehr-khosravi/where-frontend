@@ -1,0 +1,8 @@
+.donate-page {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.donate-page section {
+    scroll-margin-top: 80px;
+}
