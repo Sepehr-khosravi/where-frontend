@@ -1,22 +1,27 @@
 import "./contact.css"
 import { useState } from "react"
 
+interface FormData {
+    name: string
+    email: string
+    message: string
+}
+
 export default function SupportContact() {
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState<FormData>({
         name: '',
         email: '',
         message: ''
     })
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault()
-        // Handle form submission
         console.log('Form submitted:', formData)
         alert('Thank you! We will get back to you soon.')
         setFormData({ name: '', email: '', message: '' })
     }
 
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value
@@ -57,7 +62,7 @@ export default function SupportContact() {
                         <h3>Reach Out</h3>
                         <p>Our team is here to help. Choose a method to get in touch.</p>
                         <div className="contact-methods">
-                            {contactMethods.map((method, index) => (
+                            {contactMethods.map((method, index: number) => (
                                 <div className="contact-method" key={index}>
                                     <div className="contact-method-icon">{method.icon}</div>
                                     <div>

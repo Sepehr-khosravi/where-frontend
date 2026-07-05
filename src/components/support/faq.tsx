@@ -1,10 +1,15 @@
 import "./faq.css"
 import { useState } from "react"
 
-export default function SupportFAQ() {
-    const [openIndex, setOpenIndex] = useState(null)
+interface FAQ {
+    question: string
+    answer: string
+}
 
-    const faqs = [
+export default function SupportFAQ() {
+    const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+    const faqs: FAQ[] = [
         {
             question: "How do I share my location with a friend?",
             answer: "Go to your friend's profile and click on the 'Share Location' button. Your friend will receive a notification and can accept your location sharing request."
@@ -31,7 +36,7 @@ export default function SupportFAQ() {
         }
     ]
 
-    const toggleFAQ = (index) => {
+    const toggleFAQ = (index: number) => {
         setOpenIndex(openIndex === index ? null : index)
     }
 
@@ -44,7 +49,7 @@ export default function SupportFAQ() {
                     <p>Quick answers to common questions</p>
                 </div>
                 <div className="faq-list">
-                    {faqs.map((faq, index) => (
+                    {faqs.map((faq: FAQ, index: number) => (
                         <div 
                             className={`faq-item ${openIndex === index ? 'active' : ''}`} 
                             key={index}

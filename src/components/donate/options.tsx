@@ -2,10 +2,10 @@ import "./options.css"
 import { useState } from "react"
 
 export default function DonateOptions() {
-    const [selectedAmount, setSelectedAmount] = useState(null)
-    const [customAmount, setCustomAmount] = useState('')
+    const [selectedAmount, setSelectedAmount] = useState<number | null>(null)
+    const [customAmount, setCustomAmount] = useState<string>('')
 
-    const amounts = [5, 10, 20, 50]
+    const amounts: number[] = [5, 10, 20, 50]
 
     const handleDonate = () => {
         const amount = customAmount || selectedAmount
@@ -29,7 +29,7 @@ export default function DonateOptions() {
                         <div className="donate-card-content">
                             <span className="donate-currency">$</span>
                             <div className="amount-buttons">
-                                {amounts.map((amount) => (
+                                {amounts.map((amount: number) => (
                                     <button
                                         key={amount}
                                         className={`amount-btn ${selectedAmount === amount ? 'active' : ''}`}
@@ -48,7 +48,7 @@ export default function DonateOptions() {
                                     type="number"
                                     placeholder="Custom amount"
                                     value={customAmount}
-                                    onChange={(e) => {
+                                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                                         setCustomAmount(e.target.value)
                                         setSelectedAmount(null)
                                     }}

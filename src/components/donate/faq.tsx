@@ -2,7 +2,7 @@ import "./faq.css"
 import { useState } from "react"
 
 export default function DonateFAQ() {
-    const [openIndex, setOpenIndex] = useState(null)
+    const [openIndex, setOpenIndex] = useState<number | null>(null)
 
     const faqs = [
         {
@@ -23,7 +23,7 @@ export default function DonateFAQ() {
         }
     ]
 
-    const toggleFAQ = (index) => {
+    const toggleFAQ = (index: number) => {
         setOpenIndex(openIndex === index ? null : index)
     }
 
@@ -36,7 +36,7 @@ export default function DonateFAQ() {
                     <p>Everything you need to know about supporting us</p>
                 </div>
                 <div className="donate-faq-list">
-                    {faqs.map((faq, index) => (
+                    {faqs.map((faq, index: number) => (
                         <div 
                             className={`donate-faq-item ${openIndex === index ? 'active' : ''}`} 
                             key={index}
