@@ -1,6 +1,10 @@
 import "./download.css"
 
 export default function HomeDownload() {
+
+    const onDownloadPress = ()=>{
+        window.location.href = "https://github.com/Sepehr-khosravi?tab=repositories&q=where&type=&language=&sort="
+    }
     return (
         <div className="download">
             <div className="download-container">
@@ -11,14 +15,14 @@ export default function HomeDownload() {
                     <div className="download-buttons">
                         <button className="download-btn">
                             <span className="btn-icon">📱</span>
-                            <div>
+                            <div onClick={onDownloadPress}>
                                 <small>Download on</small>
                                 <strong>App Store</strong>
                             </div>
                         </button>
                         <button className="download-btn">
                             <span className="btn-icon">📱</span>
-                            <div>
+                            <div onClick={onDownloadPress}>
                                 <small>Get it on</small>
                                 <strong>Google Play</strong>
                             </div>

@@ -1,5 +1,5 @@
 .article {
-    width: 100%;
+    width: 95%;
     max-width: 1200px;
     margin: 0 auto;
     /* padding: 4rem 2rem; */
@@ -9,9 +9,14 @@
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    background: #fafafa;
+    /* background: #fafafa; */
     border-radius: 12px;
     margin-top: 150px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 5px solid rgba(88, 88, 88, 0.2);
+    border-radius: 12px;
 }
 
 /* Subtle background pulse animation */
@@ -22,9 +27,14 @@
     left: -50%;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at center, rgba(255,255,255,1) 0%, rgba(240,240,240,0.8) 100%);
+    /* background: radial-gradient(circle at center, rgb(241, 241, 241) 0%, rgba(240,240,240,0.8) 100%); */
     animation: pulse 8s ease-in-out infinite;
     z-index: 0;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
 }
 
 /* Floating subtle gradient circles */
@@ -35,10 +45,15 @@
     right: 10%;
     width: 300px;
     height: 300px;
-    background: radial-gradient(circle, rgba(220,220,220,0.3) 0%, transparent 70%);
+    /* background: radial-gradient(circle, rgba(220,220,220,0.3) 0%, transparent 70%); */
     border-radius: 50%;
     animation: floatCircle 12s ease-in-out infinite;
     z-index: 0;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
 }
 
 .article-content {
@@ -46,6 +61,11 @@
     z-index: 1;
     text-align: center;
     animation: fadeInUp 1s ease-out;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
 }
 
 .article-content h2 {
@@ -158,6 +178,7 @@
     .article {
         padding: 2rem 1rem;
         min-height: 300px;
+        /* margin: 10px; */
     }
     
     .article-content h2 {

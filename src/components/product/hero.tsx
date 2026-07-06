@@ -13,7 +13,7 @@ export default function ProductHero() {
                         in real-time. Simple, private, and secure.
                     </p>
                     <div className="hero-actions">
-                        <Link to="/download" className="hero-btn primary">
+                        <Link to="https://github.com/Sepehr-khosravi?tab=repositories&q=where&type=&language=&sort=" className="hero-btn primary">
                             Get Started
                         </Link>
                         <Link to="/" className="hero-btn secondary">

@@ -8,10 +8,10 @@ export default function ProductCTA() {
                 <h2>Ready to Get Started?</h2>
                 <p>Download Where and start sharing your location with friends</p>
                 <div className="cta-buttons">
-                    <Link to="/" className="cta-btn primary">
+                    <Link to="https://github.com/Sepehr-khosravi?tab=repositories&q=where&type=&language=&sort=" className="cta-btn primary">
                         Download Now
                     </Link>
-                    <Link to="/" className="cta-btn secondary">
+                    <Link to="https://github.com/Sepehr-khosravi?tab=repositories&q=where&type=&language=&sort=" className="cta-btn secondary">
                         View on GitHub
                     </Link>
                 </div>
